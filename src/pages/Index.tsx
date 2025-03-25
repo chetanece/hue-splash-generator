@@ -46,17 +46,17 @@ const Index = () => {
   return (
     <Box className="min-h-screen py-10 bg-gray-50">
       <Container size="sm">
-        <Stack spacing="lg">
-          <Title order={1} align="center" color={color}>
+        <Stack gap="lg">
+          <Title order={1} ta="center" c={color}>
             Discord Colored Text Generator
           </Title>
           
-          <Text align="center" size="md" color="dimmed">
+          <Text ta="center" size="md" c="dimmed">
             Generate custom colored text to use in your Discord messages
           </Text>
 
           <Paper p="md" withBorder shadow="sm" radius="md">
-            <Stack spacing="md">
+            <Stack gap="md">
               <TextInput
                 label="Your Text"
                 placeholder="Enter your text here"
@@ -93,9 +93,9 @@ const Index = () => {
 
           {outputText && (
             <Paper p="md" withBorder shadow="sm" radius="md">
-              <Stack spacing="md">
-                <Group position="apart">
-                  <Text weight={600}>Result:</Text>
+              <Stack gap="md">
+                <Group justify="space-between">
+                  <Text fw={600}>Result:</Text>
                   <CopyButton value={outputText}>
                     {({ copied, copy }) => (
                       <Button
@@ -119,7 +119,7 @@ const Index = () => {
                   minRows={3}
                 />
                 
-                <Text size="sm" color="dimmed">
+                <Text size="sm" c="dimmed">
                   Paste this text in Discord to see the colored text
                 </Text>
               </Stack>
@@ -127,8 +127,8 @@ const Index = () => {
           )}
           
           <Paper p="md" withBorder shadow="sm" radius="md">
-            <Stack spacing="xs">
-              <Text weight={600}>How to use:</Text>
+            <Stack gap="xs">
+              <Text fw={600}>How to use:</Text>
               <Text size="sm">1. Enter your text and choose a color</Text>
               <Text size="sm">2. Click "Generate Colored Text"</Text>
               <Text size="sm">3. Copy the generated text</Text>
